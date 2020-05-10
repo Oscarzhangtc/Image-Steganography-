@@ -16,8 +16,10 @@ Color images have three color channels (RGB), with pixel values of 0-255 for eac
 
 Provided as an example in the image folder is an image name encoded_sample. It is also the default the argument for decode_image function. The secret image was hidden in the LSB of the pixels in the red channel of the image. That is, the value of the LSB of each red pixel is 1 if the hidden image was 1 at that location, and 0 if the hidden image was also 0. To see the hidden image, simply import the image function from `steganography.py` and run:
 ```python
-`decode_image(file_location="images/encoded_sample.png")`.
+decode_image(file_location="images/encoded_sample.png")
 ```
+
+The decoded text image will be saved as `images/decoded_image.png`. 
 
 ##### Encode an Image
 The `encode_image` function, like its name, encodes an image with your secret message. Hence, requires 2 arguments: a message of your choice, and the image you want to encode the message in. 
